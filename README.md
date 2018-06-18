@@ -9,25 +9,25 @@ Description of the task : https://drive.google.com/file/d/1BC_tfgekX2pHJ7nWGbXgu
 I'm going to analyze the 1st problem.
 
 The object required:
-- Map
+- Map - 
   To generate map, and place the Thing into the map
   
-- Driver
+- Driver - 
   Name and details
 
-- User
+- User - 
   User that will order go-cli
   
-- Coordinate
+- Coordinate - 
   Generate coordinate
 
-- FileReader (contains format for args)
+- FileReader (contains format for args) - 
   To parse the file format on 1 args given to the Go-cli.rb
   
-- Go-cli (as user interface)
+- Go-cli (as user interface) - 
   Go-cli could get 0, 1, or 3 arguments
   
-- Thing 
+- Thing - 
   Driver and User
 
 *this is what I think at the moment, maybe it will change later*
