@@ -1,5 +1,5 @@
 # Go-CLI app - COMPFEST
-This is the final task COMPFEST - Software Engineering Academy
+This is second stage final assignment for COMPFEST - Software Engineering Academy
 
 Description of the task : https://drive.google.com/file/d/1BC_tfgekX2pHJ7nWGbXguhTS8-NUlEQH/view
 
