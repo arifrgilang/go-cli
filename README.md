@@ -1,9 +1,20 @@
-# go-cli-app-COMPFEST
+# Go-CLI app - COMPFEST
 This is the final task COMPFEST - Software Engineering Academy
 
 Description of the task : https://drive.google.com/file/d/1BC_tfgekX2pHJ7nWGbXguhTS8-NUlEQH/view
 
-=========================================================================
+# Design Decision
+
+Coordinate (Class)
+- User (Inheritance)
+- Driver (Inheritance)
+- Destination (Inheritance)
+
+Map (Class)
+
+  
+
+# History
 
 -1.0 (19th June, 2018 - 06.21)
 I'm going to analyze the 1st problem.
