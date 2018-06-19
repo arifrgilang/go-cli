@@ -1,6 +1,8 @@
 class User 
-	attr_accessor :coordinate
+	attr_accessor :x
+	attr_accessor :y
 	def initialize(c)
-		@coordinate = [c.x, c.y]
+		@x = c.x
+		@y = c.y
 	end
 end

@@ -1,5 +1,6 @@
 class Driver
-	attr_accessor :coordinate
+	attr_accessor :x
+	attr_accessor :y
 	attr_reader :name
 	def initialize(c)
 		names = ["Arif", "Bimo", "Cece", "Deri", "Eman", "Fakhri", 
@@ -7,7 +8,8 @@ class Driver
 			"Mirza", "Nana", "Ojan", "Pasha", "Qonit", "Rizki", 
 			"Surya", "Temon", "Ujang", "Vinka", "Wawan", "Xero", 
 			"Yadi", "Zandi"]
-		@coordinate = [c.x, c.y]
+		@x = c.x
+		@y = c.y
 		@name = names.sample
 	end
 end
