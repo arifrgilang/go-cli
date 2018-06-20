@@ -1,0 +1,23 @@
+<|1|
+|From-[10, 10]-to-[4, 4]
+|Map-size=20*20
+|Driver's-Name=Agus
+|Distance-Traveled=12-unit
+|Total-Price=3600
+|Route=
+- Start at [10, 10]
+- Go to [9, 10]
+- Go to [8, 10]
+- Go to [7, 10]
+- Go to [6, 10]
+- Go to [5, 10]
+- Go to [4, 10]
+- Turn Left
+- Go to [4, 9]
+- Go to [4, 8]
+- Go to [4, 7]
+- Go to [4, 6]
+- Go to [4, 5]
+- Go to [4, 4]
+- Finish at [4, 4]
+>

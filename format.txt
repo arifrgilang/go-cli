@@ -1,0 +1,3 @@
+mapsize 20
+user_coordinate 10,10
+drivers Agus-11,15 Bima-2,7 Gilang-4,17 Zikra-13,7
