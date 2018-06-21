@@ -14,7 +14,7 @@ Change log:
   - Adding new method **addRoute(order)** to `map.rb` . Check description below
   - Adding new method **generateMapRoute(order)** to `map_generator.rb` . Check description below
   - Adding new Class Variable **@routeArray** to `route.rb` . Check description below
-  - 
+  
 - [1.2] 21st June 2018 - (18:18)
   - Adding new behaviour to the app
     - **Before** - After order was confirmed, user move to the destination, and driver who took the order come back to his/her last Coordinate
