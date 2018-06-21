@@ -5,7 +5,8 @@ require_relative "route"
 require_relative "history"
 
 *args = ARGV
-system "cls"
+# system "cls" 
+Gem.win_platform? ? (system "cls") : (system "clear")
 
 
 # The generator to handle map according to arguments given by user
@@ -34,7 +35,8 @@ while true
 	# Option 1, 2, 3
 	case choice
 	when 1 
-		system "cls"
+		# system "cls" 
+		Gem.win_platform? ? (system "cls") : (system "clear")
 		gocli.map.projection # This method will print the map
 		puts ""
 		## THIS IS TO DISPLAY USER AND DRIVERS POSITIONS ##
@@ -89,13 +91,16 @@ while true
 			puts "|Trip Completed!"
 			puts "|Trip history has been saved"
 			pause = $stdin.gets.to_s.chomp.split(",").map(&:to_i)
-			system "cls"
+			# system "cls" 
+			Gem.win_platform? ? (system "cls") : (system "clear")
 		else
 			# Loop again if trip not confirmed
-			system "cls"
+			# system "cls" 
+			Gem.win_platform? ? (system "cls") : (system "clear")
 		end
 	when 3
-		system "cls"
+		# system "cls" 
+		Gem.win_platform? ? (system "cls") : (system "clear")
 		puts history.readHistory
 	when 4
 		puts "Thanks for using Go-CLI !"

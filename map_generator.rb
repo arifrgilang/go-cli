@@ -20,7 +20,7 @@ class MapGenerator
 		# If no argument is given
 		if args.size == 0 
 			@drivers = drawRandomDrivers(5, 20)
-			@user = drawRandomUser(5, 20, @drivers)
+			@user = drawRandomUser(20)
 
 			gmap(20)
 
@@ -56,7 +56,7 @@ class MapGenerator
 	end
 
 	# This drawing user with random Position
-	def drawRandomUser(n, mapsize, drivers)
+	def drawRandomUser(mapsize)
 		a = User.new(Coordinate.new(mapsize))
 		a
 	end
