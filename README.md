@@ -5,16 +5,24 @@ Description of the task : https://drive.google.com/file/d/1BC_tfgekX2pHJ7nWGbXgu
 
 
 
-# Go-CLI app ver 1.2
+# Go-CLI app ver 1.3
 Change log: 
-- [1.2] 21 June 2018 - (18:18)
+- [1,3] 21st June 2018 - (19:21)
+  - Adding new feature to the app
+    - **Before** - Before confirming the order, theres no route showed
+    - **After** - Before confirming the order, **a map of route will be shown** with "o". 
+  - Adding new method **addRoute(order)** to `map.rb` . Check description below
+  - Adding new method **generateMapRoute(order)** to `map_generator.rb` . Check description below
+  - Adding new Class Variable **@routeArray** to `route.rb` . Check description below
+  - 
+- [1.2] 21st June 2018 - (18:18)
   - Adding new behaviour to the app
     - **Before** - After order was confirmed, user move to the destination, and driver who took the order come back to his/her last Coordinate
     - **After** - After order was confirmed, user move to the destination, and **_the driver who took the order will roam randomly into new Coordinate_**
   - Adding new method **clearMap** into `map.rb`. Check description below
   - Adding new method **randomizeDriverFrom(order)** into `map_generator.rb`. Check description below
     
-- [1.1] 21 June 2018 - (06:36)
+- [1.1] 21st June 2018 - (06:36)
   - I made the First version of the app, but the code is still a mess and maybe didn't all use SOLID principles, so I will revise it later
 
 
@@ -193,6 +201,7 @@ It will quit the program and say "Thanks for using Go-CLI!"
      - **addDrivers(drivers)** - To insert Drivers into the map, Array of Drivers Obj as parameter
      - **removeUser(user)** - To remove user from the map, User Obj as parameter
      - **clearMap** - Remove all object from map / Clearing map display
+     - **addRoute(order)** - Adding route into the map, with Order Obj as a parameter
 
 8. **MapGenerator** -
 `map_generator.rb`
@@ -202,13 +211,14 @@ It will quit the program and say "Thanks for using Go-CLI!"
      - **@map** - To store the Map Obj of current session app
      - **@drivers** - To store the Array of Drivers of current session app
      - **@user** - To store the current user of current session app
-   - 6 Method
+   - 7 Method
      - **drawRandomUser(mapsize)** - Return a User Obj with random Coordinate the mapsize as the param for limit 
      - **drawRandomDrivers(n, mapsize)** - Return an Array of Drivers with n total of driver
      - **generate(args)** - Handling the args (ARGV) given when user first run the apps
      - **gmap(mapsize)** - Assigning driver and user to the Map obj in @map
      - **getNearestDriver** - Will return a Driver Obj that is near from user coordinate
      - **randomizeDriverFrom(order)** - Randomize the driver coordinate after the driver took order from user
+     - **generateMapRoute(order)** - Will return a map with a route added in it
 
 9. **Order** -
 `order.rb`
@@ -228,9 +238,10 @@ It will quit the program and say "Thanks for using Go-CLI!"
     - The object for creating a route 
     - Arguments (2 args)
       - **2 args(user, destination)** - User Obj, and the Coordinate Obj of destination
-    - 2 Class Variable
+    - 3 Class Variable
       - **@get** - The route that has been made after creating, contain Array of strings
       - **@distance** - The distance of the route
+      - **@addRoute** - Array of route Coordinate
     - 1 Method
       - **generateDistance(user, destination)** - To generate the distance in the route
 
