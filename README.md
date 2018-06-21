@@ -15,7 +15,7 @@ Change log:
   - Adding new method **randomizeDriverFrom(order)** into `map_generator.rb`. Check description below
     
 - [1.1] 21 June 2018 - (06:36)
-  -I made the functional program of this, but the code is still a mess and didn't use SOLID principles, so I will revise it later
+  - I made the First version of the app, but the code is still a mess and maybe didn't all use SOLID principles, so I will revise it later
 
 
 
