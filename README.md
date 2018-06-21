@@ -98,104 +98,104 @@ This will generate :
 
 ### 4. Once the app is running
 1. **Show map** -
-When user chooses this action, your app will display the map and
-show where the user is and where the drivers are.
+   When user chooses this action, your app will display the map and
+   show where the user is and where the drivers are.
 
-This is an example of 20 * 20 map
+   This is an example of 20 * 20 map
 
-_User is shown by **"#"**_
+   _User is shown by **"#"**_
 
-_Driver is shown by their initial name_
-```
-y
-| . . . . . . . . . . . . . . . . . . . .
-| . . . . . . . . . . . . . . . . . . . .
-| . . . . . . . . . . . . . . . . . . . .
-| . . . # . . . . . . . . . . . . . . . .
-| . . . . . . . . . . . . . . . . . . . .
-| . . . . . . . . . . . . . . . . . . . .
-| . . . . . . . . . . . . . . . . . . . .
-| . . . . . . . . . . . . . . . . . . . .
-| . . . . . . . . . . . . . . . . . . . .
-| . . . . . . . . . . . . . . . . . . . .
-| . . . . . . . . . . . . . . . . . . Y .
-| . . . . . . . . . . . . . . . . . . . .
-| . . . . . . . . . . . . . . . . . . . .
-| . . . . . . . . . . . . . . . . . . . .
-| . . . . . . . . . . . B . . . W . . . .
-| . . . . . . . . . . . . . . . . . . . .
-| Z . . . . . . . . . . . . . . . . . . .
-| . . . . . . . . . . . . . . . . . . . .
-| . . . . . . . . . . . . . . . . . . . .
-| . . . . . . . . E . . . . . . . . . . .
-0-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-x
-```
+   _Driver is shown by their initial name_
+   ```
+   y
+   | . . . . . . . . . . . . . . . . . . . .
+   | . . . . . . . . . . . . . . . . . . . .
+   | . . . . . . . . . . . . . . . . . . . .
+   | . . . # . . . . . . . . . . . . . . . .
+   | . . . . . . . . . . . . . . . . . . . .
+   | . . . . . . . . . . . . . . . . . . . .
+   | . . . . . . . . . . . . . . . . . . . .
+   | . . . . . . . . . . . . . . . . . . . .
+   | . . . . . . . . . . . . . . . . . . . .
+   | . . . . . . . . . . . . . . . . . . . .
+   | . . . . . . . . . . . . . . . . . . Y .
+   | . . . . . . . . . . . . . . . . . . . .
+   | . . . . . . . . . . . . . . . . . . . .
+   | . . . . . . . . . . . . . . . . . . . .
+   | . . . . . . . . . . . B . . . W . . . .
+   | . . . . . . . . . . . . . . . . . . . .
+   | Z . . . . . . . . . . . . . . . . . . .
+   | . . . . . . . . . . . . . . . . . . . .
+   | . . . . . . . . . . . . . . . . . . . .
+   | . . . . . . . . E . . . . . . . . . . .
+   0-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-x
+   ```
 
 
 
 2. **Order Go-Ride** -
-When user chooses this action, app will ask the specified coordinate.
-User should input the coordinate that he/she wants to go to.
-After that, the app will allocate the nearest driver to user and display the name of the driver, the route to destination, as well as the price estimate.
-User must confirm the Order with [y,n]
+   When user chooses this action, app will ask the specified coordinate.
+   User should input the coordinate that he/she wants to go to.
+   After that, the app will allocate the nearest driver to user and display the name of the driver, the route to destination, as well as    the price estimate.
+   User must confirm the Order with [y,n]
 
-*User inputting the destination*
-```
-|Put destination (ex: 1,1) : 10,10 
-```
+   *User inputting the destination*
+   ```
+   |Put destination (ex: 1,1) : 10,10 
+   ```
 
-.
+   .
 
-*The Display before confirming order, it will generate the route map*
-```
-|Driver found   : Zikra
-|Travel from    : [4, 17] to [10, 10]      
-|Price estimate : 3900                     
-|Route displayed as following with "o"     
-y                                          
-| . . . . . . . . . . . . . . . . . . . .  
-| . . . . . . . . . . . . . . . . . . . .  
-| . . . . . . . . . . . . . . . . . . . .  
-| . . . # o o o o o o . . . . . . . . . .  
-| . . . . . . . . . o . . . . . . . . . .  
-| . . . . . . . . . o . . . . . . . . . .  
-| . . . . . . . . . o . . . . . . . . . .  
-| . . . . . . . . . o . . . . . . . . . .  
-| . . . . . . . . . o . . . . . . . . . .  
-| . . . . . . . . . o . . . . . . . . . .  
-| . . . . . . . . . o . . . . . . . . Y .  
-| . . . . . . . . . . . . . . . . . . . .  
-| . . . . . . . . . . . . . . . . . . . .  
-| . . . . . . . . . . . . . . . . . . . .  
-| . . . . . . . . . . . B . . . W . . . .  
-| . . . . . . . . . . . . . . . . . . . .  
-| Z . . . . . . . . . . . . . . . . . . .  
-| . . . . . . . . . . . . . . . . . . . .  
-| . . . . . . . . . . . . . . . . . . . .  
-| . . . . . . . . E . . . . . . . . . . .  
-0-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-x                                           
-|Confirm order [y,n] ?
-```
+   *The Display before confirming order, it will generate the route map*
+   ```
+   |Driver found   : Zikra
+   |Travel from    : [4, 17] to [10, 10]      
+   |Price estimate : 3900                     
+   |Route displayed as following with "o"     
+   y                                          
+   | . . . . . . . . . . . . . . . . . . . .  
+   | . . . . . . . . . . . . . . . . . . . .  
+   | . . . . . . . . . . . . . . . . . . . .  
+   | . . . # o o o o o o . . . . . . . . . .  
+   | . . . . . . . . . o . . . . . . . . . .  
+   | . . . . . . . . . o . . . . . . . . . .  
+   | . . . . . . . . . o . . . . . . . . . .  
+   | . . . . . . . . . o . . . . . . . . . .  
+   | . . . . . . . . . o . . . . . . . . . .  
+   | . . . . . . . . . o . . . . . . . . . .  
+   | . . . . . . . . . o . . . . . . . . Y .  
+   | . . . . . . . . . . . . . . . . . . . .  
+   | . . . . . . . . . . . . . . . . . . . .  
+   | . . . . . . . . . . . . . . . . . . . .  
+   | . . . . . . . . . . . B . . . W . . . .  
+   | . . . . . . . . . . . . . . . . . . . .  
+   | Z . . . . . . . . . . . . . . . . . . .  
+   | . . . . . . . . . . . . . . . . . . . .  
+   | . . . . . . . . . . . . . . . . . . . .  
+   | . . . . . . . . E . . . . . . . . . . .  
+   0-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-x                                           
+   |Confirm order [y,n] ?
+   ```
 
-.
+   .
 
-*The Display after confirming the order*
-```
-=====================================      
-|You traveled to [10, 10]                  
-|Trip Completed!                           
-|Trip history has been saved
-```
-
-
-3. **View History** -
-When user chooses this action, app will show the history of the user.
-If user hasn't made any order, it will return nothing
-*history is shown below in the description*
-
-
+   *The Display after confirming the order*
+   ```
+   =====================================      
+   |You traveled to [10, 10]                  
+   |Trip Completed!                           
+   |Trip history has been saved
+   ```
+   
+   
+   3. **View History** -
+   When user chooses this action, app will show the history of the user.
+   If user hasn't made any order, it will return nothing
+   *history is shown below in the description*
+   
+   
 4. **Quit Program** -
-It will quit the program and say "Thanks for using Go-CLI!"
+   It will quit the program and say "Thanks for using Go-CLI!"
 
 
 
