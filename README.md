@@ -366,49 +366,27 @@ This will generate :
 
 
 ## Notable Assumption and Design App Details
-The recommended size of the map is the range between 3 to 80
 
-Driver *should not* have the same coordinate as the other Drivers, but Driver *could* have the same coordinate as User
+- App design
+  - The app is designed to work well if the map range between 3 to 80 
+  - When the program starts, it **reset** the history
+  - After program quit, the history will stay still
+  - The map x axis is the horizontal line, increment from left to right
+  - The map y axis is the vertical line, increment from bottom to top
+  - Distance is based on horizontal and vertical move
+  - Nearest calculation is based on horizontal and vertical line, not diagonal
+  - If there are more than 1 nearest driver, only the first one will be chosen
+  - After confirmed order, user will move to the destination coordinate
+  - After took an order, driver will roam randomly on the map
 
-Driver *should not* have a same Initial Name because the map will show Driver's Initial.
+- Driver
+  - Driver will shown in map by their Initial
+  - Driver will not have a same coordinate as the other drivers
+  - Driver could have a same coordinate as the user
+  - If drivers coordinate is the same as user coordinate, only user will be shown on map
+  - Driver's name taken randomly from 26 name with different initial from [A to Z]
+  - Driver format given as a textfile parameter should not have a same coordinate among drivers
+  - Total driver in driver format given as a textfile should not exceed map size
 
-If you run the app without any argumen like this `ruby go_cli.rb`, there is a total 26 Name randomly taken for the Driver.
-
-If you run the app with textfile.txt as a parameter like this `ruby go_cli.rb format.txt`, you could add up as many driver as you want, but remember to not exceed the size of the map, otherwise the map will look very bad
-
-If Driver have the same coordinate as the other Driver, only one driver will be shown on map
-
-If Driver have the same coordinate as the User, only User will be shown on map
-
-Map will show the User with **#** and driver with their Initial Name
-
-App will find the nearest Driver for the user
-
-If there are more than 1 nearest driver, only the first one will be chosen
-
-The nearest calculation is based on horizontal and vertical line, not diagonal
-
-The x axis is the horizontal line, increment from left to right
-
-The y axis is the vertical line, increment from bottom to top
-
-User's Destination *should not* exceed the map size, or lower than 1, otherwise app will quit
-
-When the program starts, it **reset** the history
-
-Once the user confirmed the order, History of the order will be put into the history.txt
-
-The history contains user coordinate, destination coordinate, map size, Driver's name, distance traveled, total price, and route
-
-After quitting the app, history is still there. When the program is started again after that, history of the last session will be gone.
-
-Once the user confirmed the order, the user Coordinate will be at the destination coordinate
-
-Once the user confirmed the order, the Driver who took the order will roam randomly at the map
-
-The destination inputted must be at the range of the map size
-
-The destination inputted format must be the same as what the app asks
-
-If the user input any other key instead the available option, the app will close
-
+- User
+  - User will be shown by **#** on map
