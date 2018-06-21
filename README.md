@@ -11,6 +11,8 @@ Change log:
   - Adding new behaviour to the app
     - **Before** - After order was confirmed, user move to the destination, and driver who took the order come back to his/her last Coordinate
     - **After** - After order was confirmed, user move to the destination, and **_the driver who took the order will roam randomly into new Coordinate_**
+  - Adding new method **clearMap** into `map.rb`. Check description below
+  - Adding new method **randomizeDriverFrom(order)** into `map_generator.rb`. Check description below
     
 - [1.1] 21 June 2018 - (06:36)
   -I made the functional program of this, but the code is still a mess and didn't use SOLID principles, so I will revise it later
@@ -185,11 +187,12 @@ It will quit the program and say "Thanks for using Go-CLI!"
      - **@height** - The height of the map
      - **@width** - The width of the map
      - **@projection** - 2 Dimensional Array to store the map data
-   - 4 Method
+   - 5 Method
      - **projection** - To handle the printout of the map onto the screen
      - **addUser(user)** - To insert user into the map, User Obj as parameter
      - **addDrivers(drivers)** - To insert Drivers into the map, Array of Drivers Obj as parameter
      - **removeUser(user)** - To remove user from the map, User Obj as parameter
+     - **clearMap** - Remove all object from map / Clearing map display
 
 8. **MapGenerator** -
 `map_generator.rb`
@@ -199,12 +202,13 @@ It will quit the program and say "Thanks for using Go-CLI!"
      - **@map** - To store the Map Obj of current session app
      - **@drivers** - To store the Array of Drivers of current session app
      - **@user** - To store the current user of current session app
-   - 5 Method
+   - 6 Method
      - **drawRandomUser(mapsize)** - Return a User Obj with random Coordinate the mapsize as the param for limit 
      - **drawRandomDrivers(n, mapsize)** - Return an Array of Drivers with n total of driver
      - **generate(args)** - Handling the args (ARGV) given when user first run the apps
      - **gmap(mapsize)** - Assigning driver and user to the Map obj in @map
      - **getNearestDriver** - Will return a Driver Obj that is near from user coordinate
+     - **randomizeDriverFrom(order)** - Randomize the driver coordinate after the driver took order from user
 
 9. **Order** -
 `order.rb`
