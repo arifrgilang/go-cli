@@ -238,7 +238,7 @@ It will quit the program and say "Thanks for using Go-CLI!"
      - **@coordinate** - Contains Coordinate Obj 
      - **@x** - The x value of user coordinate
      - **@y** - The y value of user coordinate
-     - **@name** - Driver's name (taken from 24 random name)
+     - **@name** - Driver's name (taken from 26 random name)
    - 0 Method
 
 5. **Format** -
@@ -372,7 +372,9 @@ Driver *should not* have the same coordinate as the other Drivers, but Driver *c
 
 Driver *should not* have a same Initial Name because the map will show Driver's Initial.
 
-There is a total 24 Name randomly taken for the Driver. So the maximum driver must be 24. Other than that will crash the app
+If you run the app without any argumen like this `ruby go_cli.rb`, there is a total 26 Name randomly taken for the Driver.
+
+If you run the app with textfile.txt as a parameter like this `ruby go_cli.rb format.txt`, you could add up as many driver as you want, but remember to not exceed the size of the map, otherwise the map will look very bad
 
 If Driver have the same coordinate as the other Driver, only one driver will be shown on map
 
