@@ -1,10 +1,12 @@
 class Route
 	attr_reader :get
 	attr_reader :distance
+	attr_reader :routeArray
 
 	# Take User Obj and Coordinate
 	def initialize(user, destination)
 		pointer = []
+		route = []
 		pointer.push(*user.coordinate.get)
 		res = ["- Start at #{pointer}"]
 		
@@ -15,6 +17,7 @@ class Route
 			(destination.x - user.coordinate.x).times do
 				pointer[0] = pointer[0] += 1
 				res.push("- Go to #{pointer}")
+				route.push([pointer[0],pointer[1]])
 			end
 			# 2
 			if user.coordinate.y < destination.y
@@ -22,12 +25,14 @@ class Route
 				(destination.y - user.coordinate.y).times do
 					pointer[1] = pointer[1] += 1
 					res.push("- Go to #{pointer}")
+					route.push([pointer[0],pointer[1]])
 				end
 			elsif user.coordinate.y > destination.y
 				res.push("- Turn Right")
 				(user.coordinate.y - destination.y).times do
 					pointer[1] = pointer[1] -= 1
 					res.push("- Go to #{pointer}")
+					route.push([pointer[0],pointer[1]])
 				end
 			else
 
@@ -37,6 +42,7 @@ class Route
 			(user.coordinate.x - destination.x).times do
 				pointer[0] = pointer[0] -= 1
 				res.push("- Go to #{pointer}")
+				route.push([pointer[0],pointer[1]])
 			end
 			#2
 			if user.coordinate.y < destination.y
@@ -44,12 +50,14 @@ class Route
 				(destination.y - user.coordinate.y).times do
 					pointer[1] = pointer[1] += 1
 					res.push("- Go to #{pointer}")
+					route.push([pointer[0],pointer[1]])
 				end
 			elsif user.coordinate.y > destination.y
 				res.push("- Turn Left")
 				(user.coordinate.y - destination.y).times do
 					pointer[1] = pointer[1] -= 1
 					res.push("- Go to #{pointer}")
+					route.push([pointer[0],pointer[1]])
 				end
 			else
 
@@ -59,11 +67,13 @@ class Route
 				(destination.y - user.coordinate.y).times do
 					pointer[1] = pointer[1] += 1
 					res.push("- Go to #{pointer}")
+					route.push([pointer[0],pointer[1]])
 				end
 			elsif user.coordinate.y > destination.y
 				(user.coordinate.y - destination.y).times do
 					pointer[1] = pointer[1] -= 1
 					res.push("- Go to #{pointer}")
+					route.push([pointer[0],pointer[1]])
 				end
 			else
 
@@ -74,6 +84,7 @@ class Route
 
 		@get = res
 		@distance = generateDistance(user, destination)
+		@routeArray = route
 	end
 
 	# This will generate the distance based on the route

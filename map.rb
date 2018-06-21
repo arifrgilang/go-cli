@@ -44,7 +44,14 @@ class Map
 		drivers.each { |d|  @projection[d.coordinate.x - 1][d.coordinate.y - 1] = "#{d.name[0]}"}
 	end
 
+	# Clearing everything from the map
 	def clearMap
 		@projection = Array.new(@width) { Array.new(@height) { "." }  }
+	end
+
+	def addRoute(order)
+		arr = order.route.routeArray
+		arr.each { |r| @projection[r[0] - 1][r[1] - 1] = "o"}
+		nil
 	end
 end

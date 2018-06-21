@@ -148,4 +148,11 @@ class MapGenerator
 		# Return the new Array of Driver
 		result.values
 	end
+
+
+	def generateMapRoute(order)
+		routeMap = @map 
+		routeMap.addRoute(order)
+		routeMap
+	end
 end

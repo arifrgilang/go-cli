@@ -1,22 +1,13 @@
 <|1|
-|From-[8, 15]-to-[1, 1]
+|From-[2, 12]-to-[1, 1]
 |Map-size=20*20
 |Driver's-Name=Joni
-|Distance-Traveled=21-unit
-|Total-Price=6300
+|Distance-Traveled=12-unit
+|Total-Price=3600
 |Route=
-- Start at [8, 15]
-- Go to [7, 15]
-- Go to [6, 15]
-- Go to [5, 15]
-- Go to [4, 15]
-- Go to [3, 15]
-- Go to [2, 15]
-- Go to [1, 15]
-- Turn Left
-- Go to [1, 14]
-- Go to [1, 13]
+- Start at [2, 12]
 - Go to [1, 12]
+- Turn Left
 - Go to [1, 11]
 - Go to [1, 10]
 - Go to [1, 9]
@@ -29,4 +20,53 @@
 - Go to [1, 2]
 - Go to [1, 1]
 - Finish at [1, 1]
+>
+<|2|
+|From-[1, 1]-to-[20, 20]
+|Map-size=20*20
+|Driver's-Name=Nana
+|Distance-Traveled=38-unit
+|Total-Price=11400
+|Route=
+- Start at [1, 1]
+- Go to [2, 1]
+- Go to [3, 1]
+- Go to [4, 1]
+- Go to [5, 1]
+- Go to [6, 1]
+- Go to [7, 1]
+- Go to [8, 1]
+- Go to [9, 1]
+- Go to [10, 1]
+- Go to [11, 1]
+- Go to [12, 1]
+- Go to [13, 1]
+- Go to [14, 1]
+- Go to [15, 1]
+- Go to [16, 1]
+- Go to [17, 1]
+- Go to [18, 1]
+- Go to [19, 1]
+- Go to [20, 1]
+- Turn left
+- Go to [20, 2]
+- Go to [20, 3]
+- Go to [20, 4]
+- Go to [20, 5]
+- Go to [20, 6]
+- Go to [20, 7]
+- Go to [20, 8]
+- Go to [20, 9]
+- Go to [20, 10]
+- Go to [20, 11]
+- Go to [20, 12]
+- Go to [20, 13]
+- Go to [20, 14]
+- Go to [20, 15]
+- Go to [20, 16]
+- Go to [20, 17]
+- Go to [20, 18]
+- Go to [20, 19]
+- Go to [20, 20]
+- Finish at [20, 20]
 >

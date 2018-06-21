@@ -67,9 +67,14 @@ while true
 		puts "=" * 37 # Just a separator
 
 		# Display from confirming order
+		# system "cls" 
+		Gem.win_platform? ? (system "cls") : (system "clear")
 		puts "|Driver Found   : #{order.driver.name}"
 		puts "|Travel from    : #{gocli.user.coordinate.get} to #{destination.get}"
 		puts "|Price estimate : #{order.totalPriceTo(destination)}"
+		puts "|Route displayed as following with \"o\""
+		route = gocli.generateMapRoute(order)
+		route.projection
 		print "|Confirm order [y,n] ? "
 
 		confirmation = $stdin.gets.to_s.chomp.downcase
