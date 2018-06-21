@@ -9,8 +9,8 @@ Description of the task : https://drive.google.com/file/d/1BC_tfgekX2pHJ7nWGbXgu
 Change log: 
 - [1.2] 21 June 2018 - (18:18)
   - Adding new behaviour to the app
-    -**Before** - After order was confirmed, user move to the destination, and driver who took the order come back to his/her last Coordinate
-    -**After** - After order was confirmed, user move to the destination, and **_the driver who took the order will roam randomly into new Coordinate_**
+    - **Before** - After order was confirmed, user move to the destination, and driver who took the order come back to his/her last Coordinate
+    - **After** - After order was confirmed, user move to the destination, and **_the driver who took the order will roam randomly into new Coordinate_**
     
 - [1.1] 21 June 2018 - (06:36)
   -I made the functional program of this, but the code is still a mess and didn't use SOLID principles, so I will revise it later
