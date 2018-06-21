@@ -304,7 +304,3 @@ The destination inputted format must be the same as what the app asks
 
 If the user input any other key instead the available option, the app will close
 
-
-
-
--- Under Construction --
