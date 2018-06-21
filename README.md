@@ -291,6 +291,8 @@ App will find the nearest Driver for the user
 
 If there are more than 1 nearest driver, only the first one will be chosen
 
+The nearest calculation is based on horizontal and vertical line, not diagonal
+
 The x axis is the horizontal line, increment from left to right
 
 The y axis is the vertical line, increment from bottom to top
@@ -306,6 +308,8 @@ The history contains user coordinate, destination coordinate, map size, Driver's
 After quitting the app, history is still there. When the program is started again after that, history of the last session will be gone.
 
 Once the user confirmed the order, the user Coordinate will be at the destination coordinate
+
+Once the user confirmed the order, the Driver who took the order will roam randomly at the map
 
 The destination inputted must be at the range of the map size
 
