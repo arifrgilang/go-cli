@@ -7,7 +7,7 @@ Description of the task : https://drive.google.com/file/d/1BC_tfgekX2pHJ7nWGbXgu
 
 # Go-CLI app ver 1.3
 Change log: 
-- [1,3] 21st June 2018 - (19:21)
+- [1.3] 21st June 2018 - (19:21)
   - Adding new feature to the app
     - **Before** - Before confirming the order, theres no route showed
     - **After** - Before confirming the order, **a map of route will be shown** with "o". 
