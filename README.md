@@ -188,7 +188,7 @@ This will generate :
    ```
    
    
-   3. **View History** -
+3. **View History** -
    When user chooses this action, app will show the history of the user.
    If user hasn't made any order, it will return nothing
    *history is shown below in the description*
