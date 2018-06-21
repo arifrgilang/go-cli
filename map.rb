@@ -43,4 +43,8 @@ class Map
 	def addDrivers(drivers)
 		drivers.each { |d|  @projection[d.coordinate.x - 1][d.coordinate.y - 1] = "#{d.name[0]}"}
 	end
+
+	def clearMap
+		@projection = Array.new(@width) { Array.new(@height) { "." }  }
+	end
 end

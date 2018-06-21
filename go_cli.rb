@@ -76,15 +76,16 @@ while true
 		if confirmation == "y"
 			# Put the trip to history.txt
 			history.put
-			# Move the user coordinate to destination
-			# newMap = MapGenerator.new
-			# newMap.drivers = gocli.drivers
-			# newMap.user = User.new(destination)
-			gocli.map.removeUser(gocli.user)
+			
+			# Re build the map
+			gocli.map.clearMap
 			gocli.user = User.new(destination)
-			gocli.map.addDrivers(gocli.drivers)
+			newDrivers = gocli.randomizeDriverFrom(order)
+			# Put the new Position of the driver, and new user coordinate
+			gocli.map.addDrivers(newDrivers)
 			gocli.map.addUser(gocli.user)
 			
+
 			puts "=" * 37 # Just a separator
 
 			puts "|You traveled to #{destination.get}"

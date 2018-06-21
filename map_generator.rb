@@ -103,4 +103,49 @@ class MapGenerator
 		end
 		nearestDriver
 	end
+
+	# This will randomize driver coordinate after took an order from user
+	def randomizeDriverFrom(order)
+		# Put Array of Drivers into hash, except the one who took the order
+		intoHash = []
+		theDriver = 0
+		@drivers.each do |d|
+			if d.name != order.driver.name 
+				intoHash.push(d.name)
+				intoHash.push(d.coordinate.get)
+			else
+				theDriver = d
+			end
+		end
+		drivers = Hash[intoHash.each_slice(2).to_a]
+
+		# Generate new unique coordinate for the driver, put it into hash
+		sizeEst = drivers.size + 1
+		while drivers.size != sizeEst
+			newCoordinate = Coordinate.new(@map.height) 
+			theDriver.coordinate = newCoordinate
+			theDriver.x = newCoordinate.x
+			theDriver.y = newCoordinate.y
+
+			if drivers.key?(theDriver.name) || drivers.has_value?([theDriver.x, theDriver.y])
+
+			else	
+				drivers[theDriver.name] = [theDriver.x, theDriver.y]
+			end
+		end
+
+		# Changing the hash value into Driver Object
+		result = {}
+		drivers.each do |key, val| 
+			result[key] = Driver.new(Coordinate.new(@map.height))
+			# result[key].coordinate = val
+			result[key].coordinate = Coordinate.new(val[0],val[1])
+			result[key].x = val[0]
+			result[key].y = val[1]
+			result[key].name = key 
+		end
+
+		# Return the new Array of Driver
+		result.values
+	end
 end
