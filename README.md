@@ -195,7 +195,7 @@ It will quit the program and say "Thanks for using Go-CLI!"
      - **@height** - The height of the map
      - **@width** - The width of the map
      - **@projection** - 2 Dimensional Array to store the map data
-   - 5 Method
+   - 6 Method
      - **projection** - To handle the printout of the map onto the screen
      - **addUser(user)** - To insert user into the map, User Obj as parameter
      - **addDrivers(drivers)** - To insert Drivers into the map, Array of Drivers Obj as parameter
