@@ -148,6 +148,7 @@ User must confirm the Order with [y,n]
 
 *The Display before confirming order, it will generate the route map*
 ```
+|Driver found   : Zikra
 |Travel from    : [4, 17] to [10, 10]      
 |Price estimate : 3900                     
 |Route displayed as following with "o"     
